@@ -1,0 +1,22 @@
+.c-breadcreamps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 30px;
+    @include media('<tablet') {
+        padding: 0;
+        font-size: 15px;
+    }
+    h1 {
+        padding: 10px 0;
+    }
+    h2 {
+        padding: 10px 0;
+    }
+    .c-breadcrumps_urls-container {
+        display: flex;
+        .c-breadcrumps_url-element {
+            color: darken($gray, 30);
+        }
+    }
+}

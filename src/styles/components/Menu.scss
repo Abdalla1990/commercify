@@ -1,0 +1,82 @@
+.c-menu {
+    background: $gray;
+    border-bottom: 1px solid darken($color: $gray, $amount: 10);
+    width: 100%;
+    position: sticky;
+    top: 18px;
+    z-index: 40;
+}
+
+.c-menu-container {
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    position: relative;
+    @include media("<desktop") {
+        display: none;
+    }
+}
+
+.c-logo {
+    width: 10%;
+    padding-top: 10px;
+    @include media("<desktop") {
+        padding-top: 0;
+        img {
+            width: 77px;
+        }
+    }
+}
+
+.c-menu-search__container {
+    width: 10px;
+    .c-header_svg {
+        color: $blue;
+        width: 20px;
+    }
+}
+
+.c-menu-wrapper {
+    display: flex;
+    width: 55%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: $black;
+}
+
+.category-container {
+    cursor: pointer;
+    display: flex;
+}
+
+.c-menu-subcategory__container {
+    display: none;
+    // transition: display 500s ease-in-out;
+    box-shadow: 0.5px 0.5px 3px darken($gray, 15);
+    width: 100%;
+    background: $gray;
+    border-top: 1px solid $blue;
+    z-index: 1000;
+    position: absolute;
+    top: 80px;
+    width: 200px;
+    padding: 20px;
+    .c-menu-subcategory-item {
+        text-transform: capitalize;
+        display: flex;
+        justify-content: left;
+        padding: 15px;
+        &:hover {
+            transition: background-color 5ms ease-in-out;
+            background-color: darken($color: $gray, $amount: 3);
+        }
+    }
+}

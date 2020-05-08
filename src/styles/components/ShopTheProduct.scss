@@ -1,0 +1,131 @@
+$block: '.quantity-input';
+$border: 0 solid #dbdbdb;
+$border-radius: 3px;
+$color--primary:#57ccc4;
+$modifier--text-color: #888;
+.c-shop-the-product__buy-container {
+    display: flex;
+    // flex-direction: column;
+    // margin-top: 30px;
+    // margin-bottom: 20px;
+}
+
+.c-shop-the-product__buy-container {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.c-options-selection__container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    .Dropdown-control {
+        cursor: pointer;
+        border-color: #a46497;
+        max-height: 40px;
+        max-width: 220px;
+    }
+}
+
+.c-quantity-picker__container {
+    // margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: $color--primary;
+}
+
+#{$block} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius;
+    &:focus {
+        background: red;
+    }
+}
+
+#{$block}__modifier,
+#{$block}__screen {
+    user-select: none;
+    outline: none;
+}
+
+#{$block}__modifier {
+    // padding: 0 .7rem;
+    // height: 15px;
+    background: $color--primary;
+    color: $white;
+    border: $border;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(#fff, .6);
+    cursor: pointer;
+    &:hover {
+        background: darken($color--primary, 10%);
+        color: lighten($color--primary, 30%)
+    }
+    &--left {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+    &--right {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
+}
+
+#{$block}__screen {
+    width: 3rem;
+    padding: .44rem;
+    font-size: 1.5rem;
+    border: 0;
+    border-top: $border;
+    border-bottom: $border;
+    text-align: center;
+    color: $white;
+}
+
+.c-add-to-cart,
+.c-checkout {
+    background-color: #a46497;
+    // width: 25%;
+    border-radius: $border-radius;
+    color: $white;
+    padding: 6px;
+    // margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        background-color: lighten(#a46497, 10);
+        transform: scale(1.02);
+        transition: 50ms transform transform;
+        color: lighten($white, 10);
+    }
+}
+
+.c-add-to-cart.disabled {
+    background-color: $gray;
+    &:hover {
+        background-color: $gray;
+        color: $white;
+    }
+}
+
+.c-shop-prices-container {
+    color: $blue;
+    display: flex;
+    min-height: 30px;
+    >div:not(:first-child) {
+        padding: 0 10px;
+    }
+    >div:first-child {
+        padding-right: 10px;
+    }
+    .c-shop-prices-value {
+        margin: 0;
+        padding: 0;
+    }
+    .c-shop-prices-value.before {
+        color: darken($gray, 20);
+        text-decoration: line-through;
+    }
+}

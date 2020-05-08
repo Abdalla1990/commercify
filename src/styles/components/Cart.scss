@@ -1,0 +1,120 @@
+.c-cart_overlay_container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    min-width: 40%;
+    background: $gray;
+    z-index: 59;
+    padding: 36px 40px;
+    transform: translateX(100%);
+    -webkit-transition: transform 120ms ease-out;
+    -moz-transition: transform 120ms ease-out;
+    -o-transition: transform 120ms ease-out;
+    transition: transform 120ms ease-out;
+    & svg {
+        position: absolute;
+        top: 35px;
+        left: 23px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+    }
+    @include media("<tablet") {
+        padding: 70px 0px;
+        width: 100%;
+    }
+}
+
+.toggleCart {
+    position: fixed;
+    transform: translateX(0) !important;
+    -webkit-transition: transform 120ms ease-in;
+    -moz-transition: transform 120ms ease-in;
+    -o-transition: transform 120ms ease-in;
+    transition: transform 120ms ease-in;
+    overflow: hidden;
+}
+
+.c-cart-products-details_container {
+    padding: 20px 20px 0 20px;
+    height: 70%;
+    overflow: scroll;
+    >:nth-child(odd) {
+        background-color: darken($gray, 5);
+    }
+    @include media("<tablet") {
+        padding: 5px;
+    }
+}
+
+.c-cart-title {
+    font-weight: 600;
+    text-align: center;
+    font-size: 30px;
+    @include media('<tablet') {
+        padding-bottom: 10px;
+    }
+}
+
+.c-cart-product-details {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-height: 40%;
+    @include media('<tablet') {
+        justify-content: space-between;
+        padding: 8px;
+    }
+    >img {
+        width: auto;
+        height: 160px;
+        padding: 20px;
+        @include media('<tablet') {
+            padding: 0;
+            padding-left: 5px;
+        }
+    }
+    .c-cart-product-details-content {
+        padding: 20px;
+        justify-content: space-around;
+        @include media('<tablet') {
+            width: 50%;
+            padding: 0;
+            padding-left: 10px;
+        }
+    }
+}
+
+.c-cart-payment-method,
+.c-cart-billing-address {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    .container {
+        width: 100%;
+        color: darken($gray, 40);
+        font-size: 17px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &>div {
+            border: solid 1px darken($gray, 20);
+            padding: 5px;
+            width: 100%;
+        }
+        .card {
+            width: 100%;
+            .row {
+                border: solid 1px darken($gray, 20);
+                padding: 5px;
+            }
+        }
+        .btn {
+            padding: 12px;
+            background-color: darken($gray, 20);
+        }
+    }
+}

@@ -1,0 +1,186 @@
+.promo-and-featured-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo-wrapper {
+    display: flex;
+    flex-direction: row;
+    @include media("<=tablet") {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    margin-bottom: 15px;
+}
+
+.c-promo__container {
+    display: flex;
+    .c-promo__cta-container {
+        @include media("<=tablet") {
+            max-width: 100%;
+        }
+        max-width: 260.453px;
+        min-width: 31.6%;
+        .c-promo__title-container>h1 {
+            @include media("<=tablet") {
+                font-size: 24px;
+            }
+            font-size: 25px;
+            line-height: 1.3em;
+            padding-bottom: 4px;
+        }
+    }
+    @include media("<=tablet") {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.c-promo_image-wrapper {
+    display: flex;
+    width: 70%;
+    overflow: hidden;
+    @include media("<=tablet") {
+        width: 100%;
+    }
+    .c-promo_image-container {
+        width: 100%;
+        display: flex;
+        height: 100%;
+        .c-promo__image {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 5px 5px 0px;
+            @include media("<=tablet") {
+                border-radius: 5px 5px 0px 0px;
+            }
+        }
+    }
+}
+
+.c-promo__title-container {
+    padding: 0 23px;
+    .c-promo__title {
+        color: $white;
+        font-weight: $font-weight-light;
+        text-align: center;
+        line-height: 1.1;
+        @include media('<=tablet') {
+            font-size: 25px;
+            line-height: 1.3em;
+            opacity: 0.9;
+        }
+    }
+}
+
+.c-promo__cta-container {
+    width: 31.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $blue;
+    border-radius: 5px 0px 0px 5px;
+    @include media("<=tablet") {
+        width: auto;
+        border-radius: 0px 0px 5px 5px;
+        order: 2;
+        padding: 14px;
+    }
+    .c-promo__cta {
+        text-align: center;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        a {
+            color: $white !important;
+            @include media('<=tablet') {
+                padding-top: 7px;
+            }
+        }
+        &:hover {
+            transition: opacity 1s ease-in-out;
+            opacity: 0.5;
+        }
+    }
+}
+
+.c-promo-vertical__container {
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    @include media("<=tablet") {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .c-promo_image-wrapper {
+        width: 106%;
+        height: 71%;
+        .c-promo__image {
+            border-radius: 5px;
+            @include media("<=tablet") {
+                border-radius: 5px;
+            }
+        }
+    }
+    .c-promo__cta-container {
+        width: 100%;
+        border-radius: 5px;
+        height: 23%;
+        @include media("<=tablet") {
+            width: auto;
+            margin-top: 28px;
+            padding: 18px;
+        }
+        .c-promo__cta {
+            // padding: 0 40px;
+            font-weight: 300;
+        }
+    }
+}
+
+.c-promo-featured-content-wrapper {
+    min-height: 140px;
+    padding: 10px 0 10px 0;
+    display: flex;
+    @include media("<=tablet") {
+        flex-direction: column;
+    }
+    .c-promo-featured-content_container {
+        display: flex;
+        // align-items: flex-end;
+        @include media("<=tablet") {
+            align-items: flex-start;
+            .icon {
+                padding-top: 34px;
+            }
+        }
+        .icon {
+            width: 40px;
+            height: auto;
+            @include media("<=tablet") {
+                margin-top: 0px;
+            }
+            margin-top: -40px;
+            color: $blue;
+        }
+        .c-promo-featured-content_content {
+            padding: 10px;
+            width: 100%;
+            .c-promo-featured-content_item.title {
+                margin-bottom: 10px;
+                font-weight: $font-weight-light;
+                font-size: $font-size-mid;
+            }
+            .c-promo-featured-content_item.description {
+                font-weight: $font-weight-base;
+                font-size: $font-size-base;
+            }
+        }
+        .c-promo-featured-content_content.center {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.c-pdp-container {
+    width: 79%;
+    @include media('<desktop') {
+        width: 100%;
+    }
+}
+
+.c-pdp-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: $white;
+    padding-bottom: 0;
+}
+
+.c-pdp-content-container {
+    display: flex;
+    flex-direction: row;
+    @include media('<tablet') {
+        flex-direction: column
+    }
+    width: 100%;
+    justify-content: space-between;
+    .c-pdp-image-container {
+        width: 40%;
+        @include media('<tablet') {
+            width: 100%;
+            order: 1;
+        }
+        .carousel.carousel-slider {
+            .animated {
+                transform: unset;
+            }
+            .control-dots {
+                position: inherit;
+                margin: 5px 0;
+                .dot {
+                    background: darken($gray, 20);
+                    box-shadow: unset;
+                }
+                .dot.selected {
+                    background: $blue;
+                }
+            }
+            .control-arrow.control-prev::before {
+                border-right: 8px solid $blue;
+            }
+            .control-arrow.control-next::before {
+                border-left: 8px solid $blue;
+            }
+            &:hover {
+                .control-arrow {
+                    &:hover {
+                        background: unset;
+                    }
+                }
+            }
+        }
+    }
+    .c-pdp-product-info-container {
+        width: 50%;
+        @include media('<tablet') {
+            width: 100%;
+            order: 2;
+        }
+        .c-breadcreamps-container {
+            height: 40px;
+        }
+        .c-pdp-product-title {
+            border-bottom: 1px solid $gray;
+            padding-bottom: 20px;
+        }
+        .c-plp-product-price-range {
+            font-weight: 300;
+            font-size: 14px;
+            color: $blue;
+            div {
+                color: $blue;
+            }
+            .c-plp-product-price-range_separetor::before {
+                border-color: $blue;
+            }
+            .c-plp-product-price-range_from {
+                width: unset;
+            }
+        }
+        .c-pdp-product-description {
+            font-weight: 300;
+            font-size: 11px;
+        }
+    }
+}
+
+.c-tabs-container {
+    padding-top: 20px;
+    .MuiPaper-root-11.MuiAppBar-colorDefault-8 {
+        background-color: $gray;
+        color: $blue;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12)
+    }
+    .MuiButtonBase-root-59.MuiTab-root-47.MuiTab-textColorPrimary-50.MuiTab-selected-52 {
+        background-color: darken($gray, 10);
+        border: 0px;
+    }
+}

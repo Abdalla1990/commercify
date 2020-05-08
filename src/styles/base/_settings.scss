@@ -1,0 +1,55 @@
+$max-width: 1240px;
+// Color
+$white: rgb(255, 255, 255);
+$black: rgba(0, 0, 0, 0.824);
+$real-black: #000;
+$gray: #f1f0f0;
+$gray-dark:#283038;
+$gray-light: #f7f7f7;
+$blue: #3083c6;
+$primary-blue: #2a6592;
+// Font family
+$font-family-primary: 'Ubuntu',
+Arial,
+sans-serif;
+// Font color
+$font-color-base: #333;
+$font-color-body: #666;
+$font-color-header: #fff;
+$font-color-light: lighten($font-color-base, 25%);
+$font-color-lighter: lighten($font-color-base, 45%);
+//font size
+$font-size-base: 14px;
+$font-size-mid: 20px;
+$font-size-large: 30px;
+// Font weight
+$font-weight-light: 300;
+$font-weight-base: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$base-font-size: 14px;
+// Padding
+$padding-base: 15px;
+$padding-small: 10px;
+$padding-medium: 20px;
+$padding-large: 30px;
+$padding-5: 5px;
+//  Margin
+$margin-base: 15px;
+$margin-small: 10px;
+$margin-medium: 20px;
+$margin-large: 30px;
+// Some width and height
+$header-icon-width: 35px;
+$notification-width: 300px;
+$noti-icon-width: 30px;
+$circle-icon-width: 50px;
+// Border radius
+$border-radius: 3px;
+//spacing
+$s-size:1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+//breakpointes
+$breakpoints: (phone: 640px, tablet: 768px, desktop: 1024px) !default;

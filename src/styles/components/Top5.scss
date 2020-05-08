@@ -1,0 +1,75 @@
+.div-container.full-background {
+    width: 1000%;
+    display: flex;
+    justify-content: center;
+    background-color: $gray-light;
+}
+
+.c-top-5-featured-content-wrapper {
+    width: 10%;
+    @include media('<tablet') {
+        width: 11%;
+    }
+    display: flex;
+    flex-direction: column;
+    .c-top-5-title {
+        padding-top: 60px;
+        padding-bottom: 80px;
+        color: $black;
+        padding-left: 5px;
+        @include media('<tablet') {
+            padding-left: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 39px;
+            font-weight: 400;
+        }
+    }
+}
+
+.c-top-5-tiles__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    @include media(">=phone", "<tablet") {
+        flex-direction: column;
+    }
+    @include media("<=tablet") {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .c-top-5-tile {
+        display: flex;
+        flex-direction: column;
+        width: 18%;
+        @include media(">phone", "<=tablet") {
+            width: 46%;
+            justify-content: center;
+            margin-bottom: 26px;
+        }
+        @include media("<tablet") {
+            width: 100%;
+            margin-bottom: 26px;
+        }
+        .c-top-5-tile_image {
+            width: 100%;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        }
+        .c-top-5-tile_title {
+            background-color: #283038;
+            color: $white;
+            padding: 10px;
+            border-bottom-right-radius: 7px;
+            border-bottom-left-radius: 7px;
+            word-break: break-word;
+            // min-height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

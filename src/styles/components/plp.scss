@@ -1,0 +1,99 @@
+.c-plp-container {
+    display: flex;
+    min-width: 100%;
+    @include media('<tablet') {
+        flex-direction: column
+    }
+}
+
+.c-plp-products_wrapper {
+    width: 70%;
+    min-width: 70%;
+    padding-left: 7%;
+    padding-top: 3%;
+    @include media('<tablet') {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+.c-plp-products-container {
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .c-plp-product-container {
+        width: 18%;
+        padding: 15px 20px;
+        @include media('<tablet') {
+            width: 35%;
+        }
+    }
+}
+
+.c-plp-product-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // min-height: 82%;
+    opacity: 1;
+    cursor: pointer;
+    transition: 35ms opacity ease-in-out;
+    &:hover {
+        transition: 35ms opacity ease-in-out;
+        opacity: 0.7;
+    }
+    .c-plp-product-image_source {
+        width: 100%;
+    }
+}
+
+.c-plp-product-price-range {
+    display: flex;
+    font-weight: $font-weight-bold;
+    font-size: 9px;
+    .c-plp-product-price-range_separetor {
+        width: 5%;
+        color: $black;
+        font-weight: 600;
+        padding: 0 10px;
+        &::before {
+            content: "";
+            display: block;
+            border: 1px solid grey;
+            margin: 12px 0px;
+        }
+    }
+    .c-plp-product-price-range_from,
+    .c-plp-product-price-range_to {
+        width: 30%;
+    }
+}
+
+.c-plp-product-discounted-flag {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    background-color: #ef8f61;
+    color: $white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.c-plp-load-more-button_container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    .c-plp-load-more-button {
+        background-color: $gray;
+        color: $blue;
+        transition: 15ms background-color ease-in-out;
+        padding: 10px 20px;
+        border-radius: 8px;
+        &:hover {
+            background-color: $blue;
+            color: $gray;
+            transition: 15ms background-color ease-in-out;
+        }
+    }
+}

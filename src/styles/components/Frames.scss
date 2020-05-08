@@ -1,0 +1,91 @@
+.frames-ds-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include media("<tablet") {
+        display: none;
+    }
+    // letter-spacing: 0.1rem;
+    // line-height: 1.7em;
+}
+
+.frames-mb-wrapper {
+    // letter-spacing: 0.1rem;
+    // line-height: 1.7em;
+    @include media(">=tablet") {
+        display: none;
+    }
+    .c-frames-mb_image .content {
+        text-align: justify;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        margin: 0;
+    }
+    .c-frames-mb_images-container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        .c-frames-mb_image {
+            border-radius: 20px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.c-frames-title {
+    h1 {
+        font-size: 39px;
+        font-weight: 400;
+    }
+    padding-bottom: 90px;
+    @include media('<tablet') {
+        padding-bottom: 75px;
+    }
+    color: $black;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.c-frame_images-container {
+    display: flex;
+    justify-content: space-between;
+    @include media(">=tablet", "<desktop") {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .c-frames_image {
+        border-radius: 20px;
+        width: 18%;
+        height: 25%;
+        padding: 10px;
+        .content {
+            text-align: justify;
+            line-height: 1.60;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 100;
+        }
+        @include media(">=tablet", "<desktop") {
+            width: 46%;
+            .content {
+                order: 1;
+            }
+            &.image-0 {
+                order: 2
+            }
+            &.image-2 {
+                order: 3;
+            }
+            &.image-3 {
+                order: 4;
+            }
+            &.image-4 {
+                order: 5;
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+.c-footer-container-wrapper {
+    background: #283038;
+    width: 100%;
+}
+
+.c-footer-container {
+    padding: 74px 0 0 0px;
+    width: 91%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    height: 354px;
+    .c-logo {
+        width: 13%;
+        // padding: 0 30px 30px 30px;
+        >div {
+            display: flex;
+            justify-content: space-around;
+            &:not(:first-child) {
+                padding-top: 20px;
+            }
+            margin: auto;
+            width: 60%;
+            @include media(">=tablet", "<desktop") {
+                width: 100%;
+            }
+            img {
+                width: 118px;
+            }
+            .c-logo-twitter {
+                background-color: $blue;
+            }
+            .c-logo-insta {
+                background-color: lighten($color: rgb(222, 59, 59), $amount: 0)
+            }
+            a {
+                color: $white;
+                padding: 5px;
+                border-radius: 5px;
+                >svg {
+                    width: 22px;
+                    height: auto;
+                }
+            }
+        }
+        @include media(">=tablet", "<desktop") {
+            width: 100px;
+            img {
+                width: 120px;
+            }
+        }
+        @include media("<tablet") {
+            width: 40%;
+            padding: 0;
+            img {
+                width: 100%
+            }
+        }
+    }
+    @include media("<tablet") {
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        padding: 74px 0;
+    }
+}
+
+.c-footer-nav-wrapper {
+    display: flex;
+    width: 55%;
+    justify-content: space-around;
+    color: $white;
+    @include media(">=tablet", "<desktop") {
+        width: 50%;
+        justify-content: space-evenly;
+    }
+    @include media(">=phone", "<tablet") {
+        flex-direction: column;
+        width: 75%;
+        align-items: flex-start;
+        margin: 17px 0 20px 20px;
+    }
+    .c-footer-accounts-container,
+    .c-footer-help-container {
+        width: 33%;
+        @include media(">=phone", "<tablet") {
+            width: 85%;
+            padding-top: 30px;
+        }
+    }
+    .c-footer-nav-title {
+        color: $white;
+        margin: -2px;
+        padding: 0;
+        border-bottom: 1px solid $blue;
+        font-weight: 300;
+        white-space: nowrap;
+        letter-spacing: 1.7px;
+        padding-bottom: 25px;
+        margin-bottom: 20px;
+        font-size: 1.3em;
+        @include media(">=tablet", "<desktop") {
+            font-size: 1.25em;
+        }
+    }
+    .c-footer-nave-item-container {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        .c-footer-nave-item {
+            color: $white;
+            margin: 0;
+            padding: 0;
+            font-weight: 100;
+            white-space: nowrap;
+            font-size: 13px;
+            opacity: 0.7;
+            &:hover {
+                opacity: 0.5;
+            }
+            @include media(">=tablet", "<desktop") {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+.c-footer-contact-us-form {
+    background: #ed5362;
+    width: 14%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-evenly;
+    height: 266px;
+    @include media(">=tablet", "<desktop") {
+        width: 25%;
+    }
+    @include media("<tablet") {
+        width: 60%;
+        margin-top: 30px;
+        height: 320px;
+    }
+    .c-footer-contact-us-title {
+        color: $white;
+        font-size: 24px;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        text-align: left;
+    }
+    input {
+        // width: 100%;
+        max-width: 100%;
+        background-color: aliceblue;
+        color: $gray-dark;
+        font-weight: 100;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+        border-radius: 5px;
+    }
+    .c-footer-contact-us-item-container {
+        display: flex;
+        flex-direction: column;
+         :first-child {
+            margin-bottom: 23px;
+        }
+    }
+    .c-footer-contact-us-button {
+        font-weight: 100;
+        padding: 10px;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        margin-top: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 1;
+        transition: 1s opacity ease-in-out;
+        &:hover {
+            transition: 1s opacity ease-in-out;
+            opacity: 0.6;
+        }
+    }
+}

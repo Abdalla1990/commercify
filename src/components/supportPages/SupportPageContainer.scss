@@ -1,0 +1,33 @@
+.c-support {
+    width: 180%;
+    padding-top: 100px;
+}
+
+.c-support-body-wrapper {
+    display: flex;
+}
+
+.c-support-side-wrapper {
+    width: 25%;
+}
+
+.c-support-core-wrapper {
+    width: 75%;
+}
+
+.c-support-header-title {
+    position: absolute;
+    top: 39%;
+    margin: auto;
+    color: white;
+    z-index: 10;
+    font-size: 28px;
+}
+
+.c-support-side-bar>.c-support-side-bar__wrapper {
+    .c-promo-featured-content_content {
+        >div {
+            width: 100%;
+        }
+    }
+}

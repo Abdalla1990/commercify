@@ -1,0 +1,36 @@
+.home-wrapper {
+    // background-color: $gray-light;
+    color: $font-color-body;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(0px);
+    transition: all 1s cubic-bezier(.17, .67, .35, 1);
+    -webkit-animation: fadein 1.9s ease-in;
+    -moz-animation: fadein 1.9s ease-in;
+    -o-animation: fadein 1.9s ease-in;
+    animation: fadein 1.9s ease-in;
+    >:not(:first-child) {
+        width: 100%;
+    }
+}
+
+.c-not-found-page {
+    margin: 50px;
+    background-color: $gray-dark;
+    justify-content: center;
+    width: 228%;
+    min-height: auto !important;
+    @include media('<tablet') {
+        width: 100%;
+    }
+    @include media('<desktop') {
+        .c-promo-featured-content_container {
+            justify-content: center;
+        }
+    }
+    div {
+        color: $white;
+    }
+}
