@@ -34,26 +34,13 @@ app.get('/fetch/contenful',(req,res)=>{
 })
 
 app.get('/store/',(req,res)=>{
-  // console.log('Heeey : ' ,req);
-  // const collections = getCache('collections');
-  // console.log(' is it cached ? ', collections);
-  // const shopifyEssentialContent = {
-  //   collections,
-  // }
-  // collections !== undefined ?
-  // res.status(200).send(JSON.stringify(shopifyEssentialContent)) :
   Promise.all([
     fetchCollections(),
-    // fetchTags(),
-    // fetshProducts(),
   ]).then((response) => {
-    // console.log('req : ', response[0].data.data.shop.collections.edges[0].node.products);
     const collections = adaptCollections(response[0].data.data.shop.collections.edges);
     const cached = cacheData("collections", collections);
-    console.log('cached:',cached)
     const shopifyEssentialContent = {
       collections,
-      // products: products,
     }
     res.status(200).send(JSON.stringify(shopifyEssentialContent));
   })
@@ -61,21 +48,15 @@ app.get('/store/',(req,res)=>{
 });
 
 app.get('/fetch', (req, res)=> {
-  console.log('req : ', req.query.currentCursor, req.query.type, req.query.id);
+  
   const newPatch = getCache(req.query.currentCursor);
-  console.log(' is it cached ? ', newPatch);
   newPatch !== undefined ?
   res.status(200).send({[newPatch.artist]:newPatch}) :
   Promise.all([
     fetchCollectionPatch(req.query.type, req.query.id, req.query.currentCursor),
-    // fetchTags(),
-    // fetshProducts(),
   ]).then((response) => {
-    console.log('req : ', response[0]);
     const newPatch = adaptnewPatchCollections(response[0].data.data.shop);
-    const cached = cacheData(req.query.currentCursor, newPatch);
-    console.log('cached:',cached)
-    // console.log('req : ', newPatch);
+    
     res.status(200).send({[newPatch.artist]:newPatch});
   })
   .catch(console.error)
