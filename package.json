@@ -20,7 +20,7 @@
     "dependencies": {
         "@material-ui/core": "^3.9.3",
         "@react-ag-components/address": "^0.8.3",
-        "axios": "^0.17.1",
+        "axios": "^0.21.1",
         "babel-cli": "6.24.1",
         "babel-plugin-file-loader": "^1.1.1",
         "babel-plugin-transform-class-properties": "6.24.1",
