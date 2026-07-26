@@ -20,7 +20,7 @@
     "dependencies": {
         "@material-ui/core": "^3.9.3",
         "@react-ag-components/address": "^0.8.3",
-        "axios": "^0.17.1",
+        "axios": "^1.18.1",
         "babel-cli": "6.24.1",
         "babel-plugin-file-loader": "^1.1.1",
         "babel-plugin-transform-class-properties": "6.24.1",
@@ -29,7 +29,7 @@
         "body-parser": "^1.18.3",
         "btoa": "^1.2.1",
         "classnames": "^2.2.6",
-        "contentful": "^7.5.0",
+        "contentful": "^11.12.7",
         "css-loader": "0.28.4",
         "dotenv": "^6.2.0",
         "easy-scroll": "^0.5.1",
