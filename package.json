@@ -30,7 +30,7 @@
         "btoa": "^1.2.1",
         "classnames": "^2.2.6",
         "contentful": "^7.5.0",
-        "css-loader": "0.28.4",
+        "css-loader": "7.1.4",
         "dotenv": "^6.2.0",
         "easy-scroll": "^0.5.1",
         "image-webpack-loader": "^3.4.2",
